@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Comfortaa&family=DM+Mono&family=Gruppo&family=Nova+Mono&family=Offside&family=Press+Start+2P&family=Righteous&display=swap');
+ 
+.notion-app-inner {
+    font-family: 'Offside', cursive !important;
+}
+ 
+[style*='mono'] {
+    font-family: 'DM Mono', monospace !important;
+}
+ 
+[style*='serif'] {
+ 
+}
+ 
+/* font sizes */
+:root {
+  --font-scale: 1.0;
+}
+.notion-app-inner {
+  font-size: calc(var(--font-scale) * 16px) !important;
+}
+[style*='font-size: 40px'] {
+  font-size: calc(var(--font-scale) * 40px) !important;
+}
+[style*='font-size: 16px'] {
+  font-size: calc(var(--font-scale) * 16px) !important;
+}
+[style*='font-size: 14px'] {
+  font-size: calc(var(--font-scale) * 14px) !important;
+}
+[style*='font-size: 12px'] {
+  font-size: calc(var(--font-scale) * 12px) !important;
+}
+[style*='font-size: 11px'] {
+  font-size: calc(var(--font-scale) * 11px) !important;
+}
+[style*='font-size: 1.25em'] {
+  font-size: calc(var(--font-scale) * 1.25em) !important;
+}
+ 
+/* Window control buttons block */
+#window-buttons-area {
+    padding-left: 14px; 
+}
+/* Light Theme style for window contoll buttons */
+.notion-light-theme .window-buttons {
+    background: rgb(255, 255, 255);
+    color: black;
+    border: 0;
+    margin: 0px 0px 0px 9px;
+    width: 32px;
+    line-height: 26px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition-duration: 0.2s;
+}
+.notion-light-theme .window-buttons:hover {
+    background: rgb(114, 109, 151);
+}
+/* Light Theme style for window contoll buttons */
+ 
+ 
+/* Dark Theme style for window contoll buttons */
+.notion-dark-theme .window-buttons {
+    background: rgb(47, 52, 55);
+    border: 0;
+    margin: 0px 0px 0px 9px;
+    width: 32px;
+    line-height: 26px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition-duration: 0.2s;
+}
+.notion-dark-theme .window-buttons:hover {
+    background: rgb(71, 76, 80);
+}
+/* Dark Theme style for window contoll buttons */
+ 
+ 
+ 
+/* To make cursor style as pointer when hover on scrollbar */
+.notion-scroller {
+    cursor: auto;
+}
+/* Scrollbar size */
+::-webkit-scrollbar {
+    width: 5px; /* To change vertical scrollbar width */
+    height: 12px; /* To change horizontal scrollbar height */
+}
+/* Element where vertical and horizontal scrollbars converge */
+::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+ 
+/* Light Theme style for Scrollbars */
+.notion-light-theme ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #afafaf;
+}
+.notion-light-theme ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #e4e4e4;
+}
+.notion-light-theme ::-webkit-scrollbar-thumb:hover{
+    background: #969696;
+}
+/* Light Theme style for Scrollbars */
+ 
+ 
+/* Dark Theme style for Scrollbars */
+.notion-dark-theme ::-webkit-scrollbar-track {
+    border-radius: 5px; 
+    background-color: #221F29;
+}
+.notion-dark-theme ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #312D3C;
+}
+.notion-dark-theme ::-webkit-scrollbar-thumb:hover{
+    background: #312D3C;
+}
+/* Dark Theme style for Scrollbars */
+ 
+/* Changing the width of horizontal scroller, because of wider table */
+[style^="flex-shrink: 0; flex-grow: 1; width: 100%; max-width: 100%; display: flex; align-items: center; flex-direction: column; font-size: 16px; color: rgba(255, 255, 255, 0.9); padding: 0px 96px 30vh;"] .notion-selectable .notion-scroller.horizontal::-webkit-scrollbar-track {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+ 
+/* Hide "+" button when you hover on table row, because of it's useless for me, and this buttons takes like 15px from the left side of table */
+[style^="flex-shrink: 0; flex-grow: 1; width: 100%; max-width: 100%; display: flex; align-items: center; flex-direction: column; font-size: 16px; color: rgba(255, 255, 255, 0.9); padding: 0px 96px 30vh;"] .notion-table-view [style^="opacity:"]>[role="button"], 
+[class="notion-scroller"]>.notion-table-view [style^="opacity:"]>[role="button"] {
+    display:none !important;
+}
+ 
+.notion-table-view>[data-block-id="e92bc452-807e-4be0-80d5-c60c2d82656f"]>div:nth-child(4) {
+    display: none !important;
+}
+ 
+/* Same as with table. Makes board view more wider 
+.notion-board-view {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}*/
+ 
+/* Changing content block position, less height - higher content block */
+[style^="position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; height: 30vh;"] {
+    height: 12vh !important;
+}
+/* Changing cover image height to match higher content block */
+[style^="position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; height: 30vh;"] img {
+    height: 20vh !important;
+}
+ 
+/* Hiding selection, because of changing columns width bugs selection inside table */
+[data-block-id^="bf10a506-e70d-4531-b4d5-ec4c2c99e883"] [style^="position: absolute; top: 0px; left: 0px; pointer-events: none;"]:not(.notion-presence-container) {
+    display: none;
+}
+ 
+/* Changing table header icons to make it smaller */
+[style^="display: flex; position: absolute; background: rgb(47, 52, 55); z-index: 82; height: 33px; color: rgba(255, 255, 255, 0.6);"] div:nth-child(1) svg {
+    height: 15px !important;
+    width: 15px !important;
+    margin-right: -4px;
+}
+ 
+.notion-frame {
+    background: #1E1C26 !important;
+}
+ 
+/*main content
+[style*='background: rgb(47, 52, 55)'] {
+  background: #1E1C26 !important;
+}
+*/
+ 
+/*change color of "add row" of table view, currently
+ * set to frame color */
+.notion-table-view-add-row {
+    background: #1E1C26 !important;
+}
+ 
+/*change color of CALCULATIONS row of table! 
+ * change is + div */
+.notion-table-view-add-row + div {
+    background: #1E1C26 !important;
+}
+ 
+/*get rid of hidden boards column in board view
+.notion-board-view > [data-block-id] > div:nth-last-child(2),
+.notion-board-view > [data-block-id] > div:first-child > div:nth-last-child(2) {
+  display: none !important;
+  color: white !important;
+}*/
+ 
+ 
+/*get rid of new group in board view
+.notion-board-view > [data-block-id] > div:last-child,
+.notion-board-view > [data-block-id] > div:first-child > div:last-child {
+  display: none !important;
+}*/
+ 
+/*center justify column headers. And not these only 
+ * apply as far as the letters, so you can't change
+ * the whole column color.*/
+.notion-table-view-header-cell > div > div {
+  margin: 0px auto;
+  color: #FFFFFF !important; /*color of column header text*/
+}
+ 
+/*color of sidebar, fixed and temp*/
+[style*='background: rgb(55, 60, 63)'] {
+  background: #282632 !important;
+}
+ 
+/*color of hovered buttons ?*/
+[style*='background: rgb(71, 76, 80);'] {
+  background: #282632 !important;
+  box-shadow: 0 0 0 0.5px #282632; 
+}
+ 
+/*Increases spacing between "header" and entries*/
+.notion-board-group [style='height: 4px;'] {
+  height: 20px !important;
+}
+ 
+/*Customize divider color of board!!!
+.notion-board-view > :first-child > :first-child {
+  border-top: 3px solid rgba(255, 50, 50, 0.6) !important;
+}*/
+ 
+/*Change top of border of board.
+.notion-board-view > :first-child {
+    /*padding-top: 10px !important;
+    border-top: 3px solid rgb(255, 50, 50, 0.7) !important;
+}*/
+ 
+/*
+.notion-board-view > :first-child > :first-child {
+  border-top: none !important;
+}*/
+ 
+/*make all borders and whatever red, but not dividers?
+[style*='border-top: 1px solid rgba(255, 255, 255, '] {
+ border-top: 1px solid rgba(255, 05, 05, 0.9) !important;
+}
+[style*='border-bottom: 1px solid rgba(255, 255, 255, '] {
+ border-bottom: 1px solid rgba(255, 05, 05, 0.5) !important;
+}*/
+ 
+.notion-cursor-default > [style*='border-bottom: 1px solid rgba(255, 255, 255, 0.07)'] {
+ border-bottom: 1px solid rgba(148, 148, 184, 1) !important;
+}
